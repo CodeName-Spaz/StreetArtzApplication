@@ -22,7 +22,7 @@ import firebase from 'firebase';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-<<<<<<< HEAD
+
 
 
 
@@ -35,9 +35,7 @@ export class MyApp {
   rootPage: any = SplashPage;
 
 
-=======
-  rootPage: any = SplashPage;
->>>>>>> 86325842c6fa535c8634561573cc23d8cb158c7e
+
 
   pages: Array<{title: string, component: any}>;
 
