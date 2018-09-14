@@ -193,12 +193,14 @@ export class StreetartzProvider {
   }
   selectCategory(category) {
     return new Promise((pass, fail) => {
-      firebase.database().ref("uploads/").on('value', (data: any) => {
+      firebase.database().ref("uploads").on('value', (data: any) => {
         let uploads = data.val();
+        console.log(uploads);
         var keys: any = Object.keys(uploads);
         for (var j = 0; j < keys.length; j++) {
-          firebase.database().ref("uploads/" + keys[j]).on('value', (data2: any) => {
+          firebase.database().ref("uploads").on('value', (data2: any) => {
             let uploads2 = data2.val();
+            console.log(uploads2);
             var keys2: any = Object.keys(uploads2);
             for (var i = 0; i < keys2.length; i++) {
               var k = keys2[i];
@@ -209,13 +211,14 @@ export class StreetartzProvider {
                   downloadurl: uploads2[k].downloadurl
                 }
                 this.arr.push(objt);
+                console.log(this.arr);
               }
             }
-          })
-        //  console.log(this.arr);
+          }),pass(this.arr);
         }
-      }), pass(this.arr);
+      })
     })
   }
 }
+
 

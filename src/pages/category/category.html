@@ -58,8 +58,8 @@
     </div>
 
     <div id="scroll-content">
-        <ion-grid no-padding>
-            <!-- insert the for loop on the [ion-col] tag  -->
+        <!-- <ion-grid no-padding>
+            insert the for loop on the [ion-col] tag 
             <ion-row>
                 <ion-col (click)="nextpage()">
                     <img src="../../assets/imgs/2.jpg" alt="Image">
@@ -168,7 +168,10 @@
                     <img src="../../assets/imgs/2.jpg" alt="Image"> </ion-col>
             </ion-row>
 
-        </ion-grid>
+        </ion-grid> -->
+        <ion-list *ngFor="let a of arr2">
+            <img [src]="a.downloadurl">
+        </ion-list>
         <ion-fab  edge>
             <button ion-fab mini (click)="typeOfArt()"><ion-icon name="add" ></ion-icon></button>
           </ion-fab>
