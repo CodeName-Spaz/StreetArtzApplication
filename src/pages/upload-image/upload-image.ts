@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { MainPage } from '../main/main';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz';
 import { GalleryPage } from '../gallery/gallery';
@@ -20,7 +20,7 @@ export class UploadImagePage {
   name;
   category;
   picDesc;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public firebaseService: StreetartzProvider) {
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams,public firebaseService: StreetartzProvider) {
   }
  
   ionViewDidLoad() {
@@ -53,5 +53,8 @@ export class UploadImagePage {
     }, Error =>{
       console.log(Error)
     })
+}
+dismissModal(){
+  this.viewCtrl.dismiss()
 }
 }

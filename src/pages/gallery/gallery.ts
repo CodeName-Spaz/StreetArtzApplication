@@ -4,9 +4,10 @@ import { obj } from '../../class';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz';
 import { ProfilePage } from '../profile/profile';
 import arr from '../../class';
-import { ModalController,ViewController  } from 'ionic-angular';
+import { ModalController,ViewController, PopoverController } from 'ionic-angular';
 import { UploadImagePage } from '../upload-image/upload-image';
 
+import { PopoverPage } from '../popover/popover'
 /**
  * Generated class for the GalleryPage page.
  *
@@ -22,7 +23,7 @@ import { UploadImagePage } from '../upload-image/upload-image';
 export class GalleryPage {
   obj = {} as obj
   arr = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider,public modalCtrl: ModalController,public viewCtrl: ViewController) {
+  constructor(public popoverCtrl: PopoverController,public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider,public modalCtrl: ModalController,public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
@@ -39,6 +40,11 @@ export class GalleryPage {
   }
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+  moreOpt(){
+    const popover = this.popoverCtrl.create(PopoverPage);
+    popover.present();
+
   }
   
 }

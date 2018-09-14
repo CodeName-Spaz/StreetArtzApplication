@@ -26,7 +26,9 @@ export class CategoryPage {
   nextpage(){
     this.navCtrl.push(PortfolioPage);
   }
-next(){
+  searchPage(){
+  console.log("clicked search");
+  
   this.navCtrl.push(MainPage);
 }
 }

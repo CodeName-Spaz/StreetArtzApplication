@@ -18,15 +18,20 @@ page-gallery {
         max-height: 250px;
     }
     @media screen and (min-width: 0px) {
-        @media screen and (max-width: 321px){
-       
+        @media screen and (max-width: 350px){
+            .theMenu{
+                position: absolute;
+                display: block;
+                float: left;
+            }
             #scroll-content{
                 // background: red;
-                margin-top: -70px;
+                // margin-top: -70px;
+                text-align: center;
             }
             img{
-                height: 150px;
-                width: 150px;
+                height: 155px;
+                width: 155px;
                 border: 2px solid white;
             }
             .rot{
@@ -39,15 +44,21 @@ page-gallery {
             }
         }
     } 
-    @media screen and (min-width: 322px) {
-        @media screen and (max-width: 360px){
+    @media screen and (min-width: 351px) {
+        @media screen and (max-width: 361px){
+            .theMenu{
+                position: absolute;
+                display: block;
+                float: left;
+            }
             #scroll-content{
                 // background: red;
-                margin-top: -70px;
+                text-align: center;
+                // margin-top: -70px;
             }
             img{
-                height: 100px;
-                width: 100px;
+                height: 175px;
+                width: 175px;
                 border: 2px solid white;
             }
             .rot{
@@ -63,33 +74,45 @@ page-gallery {
     @media screen and (min-width: 361px) {
         @media screen and (max-width: 414px){
             @media screen and (max-height: 732px){
-                           #scroll-content{
-                background: green;
-                margin-top: -80px;
-            }
-            img{
-                height: 180px;
-                width: 180px;
-                border: 2px solid white;
-            }
-            .rot{
-                width: 125vw;
-                height: 30vh;
-                transform: rotate(-20deg);
-                margin-top: -140px;
-                margin-left: -70px;
-                background: #222;
-            }
+                .theMenu{
+                    position: absolute;
+                    display: block;
+                    float: left;
+                }
+                #scroll-content{
+                    background: green;
+                    // margin-top: -80px;
+                }
+
+                img{
+                    height: 180px;
+                    width: 180px;
+                    border: 2px solid white;
+                }
+                .rot{
+                    width: 125vw;
+                    height: 30vh;
+                    transform: rotate(-20deg);
+                    margin-top: -140px;
+                    margin-left: -70px;
+                    background: #222;
+                }
             }
             @media screen and (min-height: 740px){
-                @media screen and (max-height: 813px){
-                    #scroll-content{
-                        background: rgb(186, 255, 186);
-                        margin-top: -80px;
+                @media screen and (max-height: 824px){
+                    // #scroll-content{
+                    //     background: rgb(186, 255, 186);
+                    // margin-top: -80px;
+                    // }
+                    .theMenu{
+                        position: absolute;
+                        display: block;
+                        float: left;
                     }
+
                     img{
-                        height: 120px;
-                        width: 120px;
+                        height: 200px;
+                        width: 200px;
                         border: 2px solid white;
                     }
                     .rot{
@@ -107,10 +130,17 @@ page-gallery {
     @media screen and (min-width:411px){
         @media screen and (max-width:769px){
             @media screen and (max-height: 739px){
+                .theMenu{
+                    position: absolute;
+                    display: block;
+                    float: left;
+                }
             #scroll-content{
                 // background: rgb(255, 0, 234);
-                margin-top: -65px
+                text-align: center;
+                // margin-top: -65px
             }
+
             img{
                 height: 200px;
                 width: 200px;
@@ -131,7 +161,7 @@ page-gallery {
         @media screen and (max-width:1025px){
             #scroll-content{
                 // background: pink;
-                margin-top: -130px;
+                // margin-top: -130px;
             }
             img{
                 height: 250px;
@@ -157,13 +187,14 @@ page-gallery {
             #scroll-content{
                 // background: red;
                 text-align: center;
-                margin-top: -110px;
+                // margin-top: -110px;
             }
             img{
                 height: 220px;
                 width: 220px;
                 border: 2px solid white;
             }
+
             ion-grid{
                 
                 width: 100%;

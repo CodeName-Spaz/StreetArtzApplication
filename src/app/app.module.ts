@@ -23,6 +23,7 @@ import { AutohideDirective } from '../directives/autohide/autohide'
 import { LoginPage } from '../pages/login/login';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadImagePage } from '../pages/upload-image/upload-image';
+import { PopoverPage } from '../pages/popover/popover'
 
 
 
@@ -45,7 +46,8 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
     PortfolioPage,
     LoginPage,
     SignupPage,
-    UploadImagePage
+    UploadImagePage,
+    PopoverPage
   ],
   imports: [
     BrowserModule, HttpClientModule ,
@@ -66,7 +68,8 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
     PortfolioPage,
     LoginPage,
     SignupPage,
-    UploadImagePage
+    UploadImagePage,
+    PopoverPage
   ],
   providers: [
     StatusBar,
