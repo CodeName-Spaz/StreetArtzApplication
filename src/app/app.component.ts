@@ -15,28 +15,15 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
 
 import firebase from 'firebase';
 
+// declare var firebase;
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-
-
-
-
- 
-
-
-
-
-
+  
   rootPage: any = SplashPage;
-
-
-
-
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {

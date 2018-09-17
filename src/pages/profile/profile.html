@@ -1,13 +1,23 @@
 
-<ion-content padding>
-    <ion-icon name="close" class="size" (click)="next()"></ion-icon>
-  <h1 id="menu" align="center">Profile</h1>
+<ion-content padding class="home">
+    <ion-icon name="close" class="size" (click)="dismiss()"></ion-icon>
+    <ion-fab top right>
+            <ion-icon name="brush" (click)="next()"></ion-icon>
+        </ion-fab>
+  <h1 id="head" align="center">Profile</h1>
   <div id="menu" align="center"> 
-      <img src="../../assets/download.png">
+      <img >
   </div>
- <ion-list *ngFor="let item of obj">
-  <p>Name:{{item.name}}</p>  
-  <p>Email:{{item.email}}</p>   
-  <p>category:{{item.cateogry}}</p> 
+  
+ <ion-list class="list" *ngFor="let item of obj" >
+  <p id="name">Name:{{item.name}}
+      
+    </p>  
+  <p>Email:{{item.email}} 
+      
+    </p>   
+  <p>Category:{{item.cateogry}}
+      
+    </p> 
  </ion-list>
 </ion-content>

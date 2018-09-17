@@ -27,7 +27,7 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
 
 
 
-
+// declare var firebase;
 
 @NgModule({
   declarations: [

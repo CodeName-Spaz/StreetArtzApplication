@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz'
 import { obj } from '../../class';
 import { GalleryPage } from '../gallery/gallery';
+import firebase from 'firebase';
 /**
  * Generated class for the ProfilePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-declare var firebase;
+// declare var firebase;
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -19,7 +20,7 @@ export class ProfilePage implements OnInit {
 
 
   obj;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider) {
+  constructor(public viewCtrl: ViewController,public navCtrl: NavController,public modalCtrl: ModalController, public navParams: NavParams, public art: StreetartzProvider) {
   }
 
   // ionViewDidLoad() {
@@ -32,5 +33,10 @@ export class ProfilePage implements OnInit {
   }
   next(){
     this.navCtrl.push(GalleryPage);
+    // this.viewCtrl.dismiss();
   }
+
+  // dismiss() {
+  //   this.viewCtrl.dismiss();
+  // }
 }

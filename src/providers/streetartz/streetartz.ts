@@ -7,7 +7,7 @@ import { LoadingController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 // import arr  from '../../class';
 
-import firebase from 'firebase';
+// import firebase from 'firebase';
 
 /*
   Generated class for the StreetartzProvider provider.
@@ -15,6 +15,7 @@ import firebase from 'firebase';
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
+declare var firebase;
 @Injectable()
 export class StreetartzProvider {
   obj = {} as obj;
