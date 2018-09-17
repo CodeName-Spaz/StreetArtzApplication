@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { obj } from '../../class';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz';
