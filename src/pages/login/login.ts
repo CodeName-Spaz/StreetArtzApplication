@@ -7,6 +7,7 @@ import { obj } from '../../class';
 import { ModalController,ViewController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
+import { ProfilePage } from '../profile/profile';
 
 
 

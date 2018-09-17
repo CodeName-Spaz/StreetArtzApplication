@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { ListPage } from '../pages/list/list';
+
 
 import firebase from 'firebase';
 
@@ -38,7 +38,7 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
   declarations: [
     MyApp,
     SplashPage,
-    ListPage,
+ 
     AutohideDirective,
     CategoryPage,
     GalleryPage,
@@ -60,7 +60,7 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
   entryComponents: [
     MyApp,
     SplashPage,
-    ListPage,
+   
     CategoryPage,
     GalleryPage,
     LoginPage,

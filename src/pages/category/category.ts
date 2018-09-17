@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PortfolioPage } from '../portfolio/portfolio';
 import { MainPage } from '../main/main';
-import {obj} from '../../class';
-import {select} from '../../class';
+import { obj } from '../../class';
+import { select } from '../../class';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz';
+import { ProfilePage } from '../profile/profile';
 /**
  * Generated class for the CategoryPage page.
  *
@@ -18,46 +19,50 @@ import { StreetartzProvider } from '../../providers/streetartz/streetartz';
   templateUrl: 'category.html',
 })
 export class CategoryPage {
-obj = {} as obj
-select = {} as select
-category;
-arr2 =[];
-uid:any;
+  obj = {} as obj
+  select = {} as select
+  category;
+  arr2 = [];
+  uid: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public art: StreetartzProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider) {
 
-    console.log(this.category);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoryPage');
   }
-  nextpage(){
+  profile(obj: obj) {
+    this.art.profile(this.obj).then((data) => {
+      this.navCtrl.push(ProfilePage, { obj: data });
+    })
+  }
+  nextpage() {
     this.navCtrl.push(PortfolioPage);
   }
-next(){
-  this.navCtrl.push(MainPage);
-}
+  next() {
+    this.navCtrl.push(MainPage);
+  }
 
-typeOfArt(){
-  this.art.selectCategory(this.category).then((data)=>{
-    // this.arr2.push(data);
-    // console.log(this.arr2);
-    var keys: any = Object.keys(data);
-    for (var i = 0; i < keys.length; i++){
-          var k = keys[i];
-          if( this.category == data[k].category ){
-            let obj = {
-              category: data[k].category,
-              downloadurl:data[k].downloadurl,
-              name:data[k].name,
-              key:k
-            }
-            this.arr2.push(obj);
-            console.log(this.arr2);
+  typeOfArt() {
+    this.art.selectCategory(this.category).then((data) => {
+      // this.arr2.push(data);
+      // console.log(this.arr2);
+      var keys: any = Object.keys(data);
+      for (var i = 0; i < keys.length; i++) {
+        var k = keys[i];
+        if (this.category == data[k].category) {
+          let obj = {
+            category: data[k].category,
+            downloadurl: data[k].downloadurl,
+            name: data[k].name,
+            key: k
           }
+          this.arr2.push(obj);
+          console.log(this.arr2);
         }
-  })
-}
+      }
+    })
+  }
 
 }

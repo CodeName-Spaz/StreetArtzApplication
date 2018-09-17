@@ -57,5 +57,8 @@ export class UploadImagePage {
       console.log(Error )
     })
   }
+  dismiss() {
+    this.view.dismiss();
+  }
  
 }

@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz'
 import { obj } from '../../class';
 import { GalleryPage } from '../gallery/gallery';
+import { CategoryPage } from '../category/category';
+import { UploadImagePage } from '../upload-image/upload-image';
+import { ModalController,ViewController  } from 'ionic-angular';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -19,7 +22,7 @@ export class ProfilePage implements OnInit {
 
 
   obj;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider,public modalCtrl: ModalController) {
   }
 
   // ionViewDidLoad() {
@@ -31,6 +34,12 @@ export class ProfilePage implements OnInit {
     console.log(this.obj);
   }
   next(){
-    this.navCtrl.push(GalleryPage);
+    this.navCtrl.push(CategoryPage);
   }
+
+  upload(){
+    const modal = this.modalCtrl.create(UploadImagePage);
+    modal.present();
+  }
+  
 }

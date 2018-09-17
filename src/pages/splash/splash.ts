@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the SplashPage page.
@@ -26,7 +27,7 @@ export class SplashPage {
 
   nextpage(){
   let timer = setInterval(()=>{
-    this.navCtrl.setRoot(CategoryPage);
+    this.navCtrl.setRoot(LoginPage);
     clearInterval(timer)
   },3000)
   }

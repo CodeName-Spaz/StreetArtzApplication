@@ -1,11 +1,12 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>upload</ion-title>
-  </ion-navbar>
+
 </ion-header>
 
 
 <ion-content padding>
+  <div class="naviagtion">
+    <button (click)="dismiss()"><ion-icon name="close" ></ion-icon></button>
+  </div>
   <ion-card>
     <ion-item class="item item-trns text-center">
       <input type="file" (change)="insertvid($event)">

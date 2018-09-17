@@ -1,13 +1,26 @@
 
-<ion-content padding>
+<ion-content padding class="home">
     <ion-icon name="close" class="size" (click)="next()"></ion-icon>
-  <h1 id="menu" align="center">Profile</h1>
-  <div id="menu" align="center"> 
-      <img src="../../assets/download.png">
+    
+  <h1 id="head" align="center">Profile</h1>
+  <div id="pic" align="center"> 
+      <img />
+      <ion-fab right>
+        <ion-icon id="icon" name="aperture" ></ion-icon>
+    </ion-fab>
   </div>
- <ion-list *ngFor="let item of obj">
-  <p>Name:{{item.name}}</p>  
-  <p>Email:{{item.email}}</p>   
-  <p>category:{{item.cateogry}}</p> 
+ <ion-list class="list" *ngFor="let item of obj" >
+    <ion-fab right>
+        <ion-icon id="icon2" name="brush" ></ion-icon>
+    </ion-fab>
+  <p id="name">
+    {{item.name}}
+    </p>  
+  <p>Email:
+    {{item.email}} 
+    </p>   
+    <ion-icon name="add" (click)="upload()"></ion-icon>
+    <button ion-button>My gallery</button>
+    
  </ion-list>
 </ion-content>
