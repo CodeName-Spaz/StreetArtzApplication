@@ -1,5 +1,34 @@
 page-profile {
+    .home{
+        background: linear-gradient(#0000003b, #d4caca)
+    }
 .size{
     font-size:5vh;
+    color: white;
+    font-weight: bolder;
+}
+img{
+    border: 2px inset black;
+    border-radius: 100%;
+    box-shadow: 0 0 5px white;
+    background-image: url('../../assets/download.png');
+    background-size: cover;
+    height: 55vw;
+    width: 55vw;
+}
+#head{
+    color: white;
+}
+// #menu{}
+.list{
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    font-size: 110%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#name{
+    font-size: 150%;
+    font-weight: bolder;
 }
 }

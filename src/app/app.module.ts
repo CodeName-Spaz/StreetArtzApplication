@@ -28,7 +28,7 @@ import { PopoverPage } from '../pages/popover/popover'
 
 
 
-
+// declare var firebase;
 
 @NgModule({
   declarations: [

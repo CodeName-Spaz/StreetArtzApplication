@@ -15,6 +15,7 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
 
 import firebase from 'firebase';
 
+// declare var firebase;
 
 @Component({
   templateUrl: 'app.html'
