@@ -38,7 +38,6 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
   declarations: [
     MyApp,
     SplashPage,
- 
     AutohideDirective,
     CategoryPage,
     GalleryPage,
@@ -60,7 +59,6 @@ import { UploadImagePage } from '../pages/upload-image/upload-image';
   entryComponents: [
     MyApp,
     SplashPage,
-   
     CategoryPage,
     GalleryPage,
     LoginPage,

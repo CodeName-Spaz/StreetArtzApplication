@@ -18,9 +18,10 @@ import { GalleryPage } from '../gallery/gallery';
 export class UploadImagePage {
   url;
   name;
-  category;
-  picDesc;
+  category:any;
+  picDesc:any;
   arr=[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,public art: StreetartzProvider,public view :ViewController) {
   }
   ionViewDidLoad() {
@@ -45,7 +46,7 @@ export class UploadImagePage {
   uploadPicture(){
     this.art.uploadPic(this.url,this.name).then(data =>{
       console.log(data);
-       this.art.storeToDB(data, this.category, this.name).then(() =>{
+       this.art.storeToDB(data, this.category, this.name,this.picDesc).then(() =>{
          console.log('added to db');
          this.navCtrl.push(GalleryPage);
         // this.view.dismiss();

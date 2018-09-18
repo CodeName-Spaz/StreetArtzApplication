@@ -124,7 +124,7 @@ export class StreetartzProvider {
       })
     })
   }
-  storeToDB(name, category, picName){
+  storeToDB(name, category, picName,picDesc){
     return new Promise((accpt,rejc) =>{
       var storageRef = firebase.storage().ref(name);
       storageRef.getDownloadURL().then(url => {
@@ -135,7 +135,8 @@ export class StreetartzProvider {
               downloadurl :link,
               name : picName,
               category: category,
-              uid:user.uid
+              uid:user.uid,
+             picDesc:picDesc
             });
             accpt('success');
       }, Error =>{

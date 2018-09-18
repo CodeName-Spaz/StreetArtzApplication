@@ -10,7 +10,6 @@ import { MainPage } from '../pages/main/main';
 import { SignupPage } from '../pages/signup/signup';
 import { CategoryPage } from '../pages/category/category';
 import { ProfilePage } from '../pages/profile/profile';
-import { GalleryPage } from '../pages/gallery/gallery';
 import { UploadImagePage } from '../pages/upload-image/upload-image';
 
 import firebase from 'firebase';
