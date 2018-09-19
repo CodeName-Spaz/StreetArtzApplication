@@ -25,9 +25,9 @@ export class SplashPage {
   }
 
   nextpage(){
-  // let timer = setInterval(()=>{
-  //   this.navCtrl.setRoot(CategoryPage);
-  //   clearInterval(timer)
-  // },3000)
+  let timer = setInterval(()=>{
+    this.navCtrl.setRoot(CategoryPage);
+    clearInterval(timer)
+  },3000)
   }
 }

@@ -1,3 +1,18 @@
 page-upload-image {
 
+    .uploadCard{
+        height: 150px;
+        width: 150px;
+        margin:0 auto;
+        box-shadow: 0px 0px 5px grey;
+        background: url('../../assets/download.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 500px;
+    }
+    .inp{
+        height: 150px;
+        width: 150px;
+        opacity: 0;
+    }
 }
