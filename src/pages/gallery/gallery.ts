@@ -4,7 +4,8 @@ import { obj } from '../../class';
 import { StreetartzProvider } from '../../providers/streetartz/streetartz';
 import { ProfilePage } from '../profile/profile';
 import arr from '../../class';
-import { ModalController } from 'ionic-angular';
+import { ModalController,ViewController  } from 'ionic-angular';
+import { UploadImagePage } from '../upload-image/upload-image';
 
 /**
  * Generated class for the GalleryPage page.
@@ -21,7 +22,7 @@ import { ModalController } from 'ionic-angular';
 export class GalleryPage {
   obj = {} as obj
   arr = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public art: StreetartzProvider,public modalCtrl: ModalController,public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
@@ -32,9 +33,11 @@ export class GalleryPage {
       this.navCtrl.push(ProfilePage, {obj:data});
     })
   }
-  presentModal() {
-    // const modal = this.modalCtrl.create();
-    // modal.present();
+ upload(){
+    const modal = this.modalCtrl.create(UploadImagePage);
+    modal.present();
   }
-
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
 }

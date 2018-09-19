@@ -39,16 +39,11 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
     
   }
-
-
   signup(){
     const modal = this.modalCtrl.create(SignupPage);
     modal.present();
   }
 
-  dismiss() {
-    this.viewCtrl.dismiss();
-  }
   login(obj:obj) {
     this.art.login(this.obj.email,this.obj.password ).then(()=>{
      this.presentLoading();

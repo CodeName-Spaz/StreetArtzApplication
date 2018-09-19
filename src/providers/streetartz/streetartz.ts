@@ -65,11 +65,24 @@ export class StreetartzProvider {
   login(email, password) {
     return new Promise((resolve, reject) => {
       firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-        resolve()
-      }, Error => {
-        alert(Error)
+        resolve();
 
-      });
+      }).catch((error) => {
+        const alert = this.alertCtrl.create({
+          title: error.code,
+          subTitle: error.message,
+          buttons: [
+            {
+              text: 'ok',
+              handler: data => {
+                console.log('Cancel clicked');
+              }
+            }
+          ]
+        });
+        alert.present();
+        console.log(error);
+      })
     })
   }
 
@@ -93,5 +106,50 @@ forgotpassword(email){
     resolve();
  })
  }
+
+uploadPic(pic,name){
+
+  let loading = this.loadingCtrl.create({
+    spinner: 'bubbles',
+    content: 'Please wait',
+    duration: 3000
+  });
+  
+  const toast = this.toastCtrl.create({
+      message: 'Ur image has been added!',
+      duration: 3000
+  
+    });
+return new Promise((accpt,rejc) =>{
+  loading.present();
+  firebase.storage().ref(name).putString(pic, 'data_url').then(() =>{
+  accpt(name);
+  toast.present();
+}, Error =>{
+  rejc(Error.message)
+})
+})
+}
+storeToDB(name, category, picName){
+return new Promise((accpt,rejc) =>{
+  var storageRef = firebase.storage().ref(name);
+  storageRef.getDownloadURL().then(url => {
+    console.log(url)
+    var user = firebase.auth().currentUser;
+    var link =  url;
+    firebase.database().ref('uploads/' + user.uid).push({
+          downloadurl :link,
+          name : picName,
+          category: category,
+        });
+        accpt('success');
+  }, Error =>{
+    rejc(Error.message);
+    console.log(Error.message);
+    });
+  })
+}
+
+
 }
 

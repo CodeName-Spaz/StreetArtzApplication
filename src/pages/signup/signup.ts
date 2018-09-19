@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-
 import { IonicPage, NavController, ModalController, NavParams,ViewController, AlertController } from 'ionic-angular';
-
-
 import { LoginPage } from '../login/login';
-import { StreetartzProvider } from '../../providers/streetartz/streetartz'
+import { StreetartzProvider } from '../../providers/streetartz/streetartz';
 import { obj } from '../../class';
 import { ToastController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
