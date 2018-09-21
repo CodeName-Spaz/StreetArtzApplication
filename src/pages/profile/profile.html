@@ -1,26 +1,28 @@
-
 <ion-content padding class="home">
-    <ion-icon name="close" class="size" (click)="next()"></ion-icon>
-    
+  <ion-icon name="close" class="size" (click)="next()"></ion-icon>
+
   <h1 id="head" align="center">Profile</h1>
-  <div id="pic" align="center"> 
-      <img />
-      <ion-fab right>
-        <ion-icon id="icon" name="aperture" ></ion-icon>
+  <div id="pic" align="center">
+    <img />
+    <ion-fab right>
+      <ion-icon id="icon" name="aperture"></ion-icon>
     </ion-fab>
   </div>
- <ion-list class="list" *ngFor="let item of obj" >
+  <ion-list class="list" *ngFor="let item of obj">
     <ion-fab right>
-        <ion-icon id="icon2" name="brush" ></ion-icon>
+      <ion-icon id="icon2" name="brush"></ion-icon>
     </ion-fab>
-  <p id="name">
-    {{item.name}}
-    </p>  
-  <p>Email:
-    {{item.email}} 
-    </p>   
+    <p id="name">
+      {{item.name}}
+    </p>
+    <p>Instagram: {{item.instagram}}
+    </p>
+    <p>Facebook: {{item.Facebook}}
+    </p>
+    <p>Twitter: {{item.twitter}}
+    </p>
     <ion-icon name="add" (click)="upload()"></ion-icon>
     <button ion-button>My gallery</button>
-    
- </ion-list>
+
+  </ion-list>
 </ion-content>
